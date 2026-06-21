@@ -273,8 +273,8 @@ h2 {
 }
 
 .hero-subtitle,
-.about-body > p,
-.contact-copy > p {
+.about-body>p,
+.contact-copy>p {
     color: var(--muted);
     font-size: 1.08rem;
     line-height: 1.8;
@@ -631,12 +631,27 @@ h2 {
 
 .project-visual {
     min-height: 250px;
+    position: relative;
     display: flex;
     align-items: end;
     padding: 20px;
     color: #ffffff;
     font-size: 2.1rem;
     font-weight: 900;
+}
+
+.project-visual img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.project-visual span {
+    position: relative;
+    z-index: 1;
 }
 
 .visual-one {
@@ -714,7 +729,7 @@ h2 {
     padding: 32px;
 }
 
-.testimonial-card > p {
+.testimonial-card>p {
     color: var(--text);
     font-size: 1.35rem;
     line-height: 1.7;
@@ -867,6 +882,7 @@ h2 {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
@@ -876,6 +892,7 @@ h2 {
 }
 
 @media (max-width: 980px) {
+
     .hero-grid,
     .split-layout,
     .contact-grid,
@@ -938,6 +955,7 @@ h2 {
 }
 
 @media (max-width: 520px) {
+
     .container,
     .nav-container {
         width: min(100% - 28px, 1160px);
