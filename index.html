@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel | Creative Web Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <svg class="icon-sprite" aria-hidden="true">
+        <symbol id="icon-arrow-right" viewBox="0 0 24 24">
+            <path d="M5 12h14"></path>
+            <path d="m13 6 6 6-6 6"></path>
+        </symbol>
+        <symbol id="icon-code" viewBox="0 0 24 24">
+            <path d="m16 18 6-6-6-6"></path>
+            <path d="m8 6-6 6 6 6"></path>
+        </symbol>
+        <symbol id="icon-layout" viewBox="0 0 24 24">
+            <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+            <path d="M3 9h18"></path>
+            <path d="M9 21V9"></path>
+        </symbol>
+        <symbol id="icon-pen" viewBox="0 0 24 24">
+            <path d="M12 20h9"></path>
+            <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path>
+        </symbol>
+        <symbol id="icon-zap" viewBox="0 0 24 24">
+            <path d="M13 2 3 14h8l-1 8 11-13h-8Z"></path>
+        </symbol>
+        <symbol id="icon-mail" viewBox="0 0 24 24">
+            <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+            <path d="m3 7 9 6 9-6"></path>
+        </symbol>
+        <symbol id="icon-phone" viewBox="0 0 24 24">
+            <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"></path>
+        </symbol>
+        <symbol id="icon-copy" viewBox="0 0 24 24">
+            <rect x="9" y="9" width="13" height="13" rx="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+        </symbol>
+        <symbol id="icon-linkedin" viewBox="0 0 24 24">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+        </symbol>
+        <symbol id="icon-github" viewBox="0 0 24 24">
+            <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.1-1.3-.3-2.6-1-3.6.3-1.1.3-2.3 0-3.4 0 0-1 0-3 1.4a10.4 10.4 0 0 0-5.5 0C8.5 2 7.5 2 7.5 2c-.3 1.1-.3 2.3 0 3.4a5.2 5.2 0 0 0-1 3.6c0 3.5 3 5.5 6 5.5a4.8 4.8 0 0 0-1 3.5v4"></path>
+            <path d="M9 18c-4.5 2-4-2-6-2"></path>
+        </symbol>
+        <symbol id="icon-dribbble" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M8.6 3.4c4.5 5 7.2 10.8 8 17"></path>
+            <path d="M2.2 12.8c5.7.1 10.8-1.8 15.3-5.7"></path>
+            <path d="M5.4 19.2c2.3-4.3 6-6.8 11.3-7.4 1.8-.2 3.4-.1 4.8.2"></path>
+        </symbol>
+        <symbol id="icon-up" viewBox="0 0 24 24">
+            <path d="m18 15-6-6-6 6"></path>
+        </symbol>
+    </svg>
+    <div class="page-progress" id="pageProgress"></div>
+
+    <nav class="navbar" aria-label="Primary navigation">
+        <div class="nav-container">
+            <a class="logo" href="#home" aria-label="Daniel home">
+                <span class="logo-mark">D</span>
+                <span class="logo-text">Daniel</span>
+            </a>
+
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active" data-section="home">Home</a>
+                <a href="#about" class="nav-link" data-section="about">About</a>
+                <a href="#services" class="nav-link" data-section="services">Services</a>
+                <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+                <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme">
+                    <span class="theme-icon theme-sun"></span>
+                    <span class="theme-icon theme-moon"></span>
+                </button>
+                <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero section">
+            <div class="container hero-grid">
+                <div class="hero-copy reveal">
+                    <p class="eyebrow">Available for freelance work</p>
+                    <h1>I build clean websites, strong brands, and smooth digital experiences.</h1>
+                    <p class="hero-subtitle">
+                        I am Daniel, a web developer and graphic designer focused on modern interfaces,
+                        responsive builds, and visual systems that help ideas look sharp online.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn btn-primary">View Projects <svg class="icon"><use href="#icon-arrow-right"></use></svg></a>
+                        <a href="#contact" class="btn btn-secondary">Start a Project <svg class="icon"><use href="#icon-mail"></use></svg></a>
+                    </div>
+                    <div class="hero-metrics" aria-label="Portfolio highlights">
+                        <div>
+                            <strong data-count="50">0</strong>
+                            <span>Projects</span>
+                        </div>
+                        <div>
+                            <strong data-count="30">0</strong>
+                            <span>Clients</span>
+                        </div>
+                        <div>
+                            <strong data-count="5">0</strong>
+                            <span>Years</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-panel reveal">
+                    <div class="status-card">
+                        <span class="status-dot"></span>
+                        <span>Designing and coding in Lagos</span>
+                    </div>
+                    <div class="device-preview" aria-label="Portfolio preview">
+                        <div class="browser-bar">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="preview-header"></div>
+                        <div class="preview-grid">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="preview-lines">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="tool-cloud" aria-label="Core tools">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>React</span>
+                        <span>Figma</span>
+                        <span>Branding</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about section">
+            <div class="container split-layout">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">About me</p>
+                    <h2>Creative direction with developer discipline.</h2>
+                    <div class="about-photo">
+                        <div class="photo-frame">
+                            <span>Add your picture here</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-body reveal">
+                    <p>
+                        I turn rough ideas into polished websites, dashboards, landing pages, and brand
+                        visuals. My work combines layout, color, typography, interaction, and frontend code
+                        so the final product feels intentional from the first screen to the last click.
+                    </p>
+                    <p>
+                        I care about clear communication, fast pages, responsive layouts, and designs that
+                        can keep growing after launch.
+                    </p>
+                    <div class="about-cards">
+                        <div class="info-card">
+                            <span>01</span>
+                            <h3>Plan</h3>
+                            <p>Map the audience, goals, pages, and features before design begins.</p>
+                        </div>
+                        <div class="info-card">
+                            <span>02</span>
+                            <h3>Design</h3>
+                            <p>Create modern interfaces with clean visual hierarchy and brand detail.</p>
+                        </div>
+                        <div class="info-card">
+                            <span>03</span>
+                            <h3>Build</h3>
+                            <p>Develop responsive, accessible pages with smooth interactions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services section">
+            <div class="container">
+                <div class="section-heading centered reveal">
+                    <p class="eyebrow">Services</p>
+                    <h2>Everything needed to launch a polished digital presence.</h2>
+                </div>
+                <div class="services-grid">
+                    <article class="service-card reveal">
+                        <span class="service-icon"><svg class="icon"><use href="#icon-code"></use></svg></span>
+                        <h3>Website Development</h3>
+                        <p>Responsive portfolios, business websites, landing pages, and web apps built with clean frontend code.</p>
+                        <button class="text-button" data-service="Website Development">Discuss this <svg class="icon"><use href="#icon-arrow-right"></use></svg></button>
+                    </article>
+                    <article class="service-card reveal">
+                        <span class="service-icon"><svg class="icon"><use href="#icon-layout"></use></svg></span>
+                        <h3>UI/UX Design</h3>
+                        <p>Wireframes, high-fidelity screens, user flows, and prototypes that make products easier to use.</p>
+                        <button class="text-button" data-service="UI/UX Design">Discuss this <svg class="icon"><use href="#icon-arrow-right"></use></svg></button>
+                    </article>
+                    <article class="service-card reveal">
+                        <span class="service-icon"><svg class="icon"><use href="#icon-pen"></use></svg></span>
+                        <h3>Brand Identity</h3>
+                        <p>Logos, color palettes, typography, social graphics, and brand guidelines for consistent presentation.</p>
+                        <button class="text-button" data-service="Brand Identity">Discuss this <svg class="icon"><use href="#icon-arrow-right"></use></svg></button>
+                    </article>
+                    <article class="service-card reveal">
+                        <span class="service-icon"><svg class="icon"><use href="#icon-zap"></use></svg></span>
+                        <h3>Backend Development</h3>
+                        <p>Server-side logic, database setup, API integration, authentication flow, and reliable backend structure for web apps.</p>
+                        <button class="text-button" data-service="Backend Development">Discuss this <svg class="icon"><use href="#icon-arrow-right"></use></svg></button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects section">
+            <div class="container">
+                <div class="section-heading centered reveal">
+                    <p class="eyebrow">Selected work</p>
+                    <h2>Featured projects with filters and quick previews.</h2>
+                </div>
+
+                <div class="filter-bar reveal" aria-label="Project filters">
+                    <button class="filter-btn active" type="button" data-filter="all">All</button>
+                    <button class="filter-btn" type="button" data-filter="web">Web</button>
+                    <button class="filter-btn" type="button" data-filter="design">Design</button>
+                    <button class="filter-btn" type="button" data-filter="brand">Brand</button>
+                </div>
+
+                <div class="projects-grid">
+                    <article class="project-card reveal" data-category="web" data-title="E-Commerce Platform" data-description="A responsive online store with product filtering, cart flow, checkout screens, and a bold product-first interface.">
+                        <div class="project-visual visual-one">
+                            <span>Shop UI</span>
+                        </div>
+                        <div class="project-info">
+                            <p class="project-type">Web Development</p>
+                            <h3>E-Commerce Platform</h3>
+                            <p>Product browsing, cart states, checkout layout, and responsive storefront pages.</p>
+                            <div class="project-tags">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>Stripe</span>
+                            </div>
+                            <button class="project-link" type="button">Preview Project <svg class="icon"><use href="#icon-arrow-right"></use></svg></button>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal" data-category="design" data-title="Analytics Dashboard" data-description="A high-clarity dashboard concept with cards, trend charts, alerts, and a layout made for scanning business metrics fast.">
+                        <div class="project-visual visual-two">
+                            <span>Dashboard</span>
+                        </div>
+                        <div class="project-info">
+                            <p class="project-type">UI Design</p>
+                            <h3>Analytics Dashboard</h3>
+                            <p>Data cards, charts, filters, and a polished admin experience for teams.</p>
+                            <div class="project-tags">
+                                <span>Figma</span>
+                                <span>D3</span>
+                                <span>UX</span>
+                            </div>
+                            <button class="project-link" type="button">Preview Project <svg class="icon"><use href="#icon-arrow-right"></use></svg></button>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal" data-category="brand" data-title="Brand Identity Package" data-description="A full identity direction covering logo, typography, palette, business cards, and social media templates.">
+                        <div class="project-visual visual-three">
+                            <span>Identity</span>
+                        </div>
+                        <div class="project-info">
+                            <p class="project-type">Brand Design</p>
+                            <h3>Brand Identity Package</h3>
+                            <p>Logo system, color palette, typography rules, and launch-ready graphics.</p>
+                            <div class="project-tags">
+                                <span>Logo</span>
+                                <span>Illustrator</span>
+                                <span>Guides</span>
+                            </div>
+                            <button class="project-link" type="button">Preview Project <svg class="icon"><use href="#icon-arrow-right"></use></svg></button>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal" data-category="web" data-title="Portfolio System" data-description="A fast portfolio template with theme switching, project filtering, contact form feedback, and mobile navigation.">
+                        <div class="project-visual visual-four">
+                            <span>Portfolio</span>
+                        </div>
+                        <div class="project-info">
+                            <p class="project-type">Frontend Build</p>
+                            <h3>Portfolio System</h3>
+                            <p>Personal portfolio with interaction polish, reusable sections, and strong mobile flow.</p>
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JS</span>
+                            </div>
+                            <button class="project-link" type="button">Preview Project <svg class="icon"><use href="#icon-arrow-right"></use></svg></button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills section">
+            <div class="container split-layout">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Skills</p>
+                    <h2>Tools I use to move from idea to launch.</h2>
+                </div>
+                <div class="skills-panel reveal">
+                    <div class="skill-row" style="--level: 95%">
+                        <span>HTML / CSS</span>
+                        <strong>95%</strong>
+                        <div class="skill-track"><i></i></div>
+                    </div>
+                    <div class="skill-row" style="--level: 90%">
+                        <span>JavaScript</span>
+                        <strong>90%</strong>
+                        <div class="skill-track"><i></i></div>
+                    </div>
+                    <div class="skill-row" style="--level: 88%">
+                        <span>React</span>
+                        <strong>88%</strong>
+                        <div class="skill-track"><i></i></div>
+                    </div>
+                    <div class="skill-row" style="--level: 93%">
+                        <span>Figma</span>
+                        <strong>93%</strong>
+                        <div class="skill-track"><i></i></div>
+                    </div>
+                    <div class="skill-row" style="--level: 87%">
+                        <span>Brand Design</span>
+                        <strong>87%</strong>
+                        <div class="skill-track"><i></i></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials section" aria-label="Testimonials">
+            <div class="container">
+                <div class="section-heading centered reveal">
+                    <p class="eyebrow">Feedback</p>
+                    <h2>Client words that describe the work style.</h2>
+                </div>
+                <div class="testimonial-card reveal" id="testimonialCard">
+                    <p id="testimonialQuote">Daniel took our rough idea and turned it into a clean, professional website that felt easy to use on every device.</p>
+                    <div>
+                        <strong id="testimonialName">Amara King</strong>
+                        <span id="testimonialRole">Founder, Studio Nova</span>
+                    </div>
+                    <div class="testimonial-controls">
+                        <button type="button" id="prevTestimonial" aria-label="Previous testimonial">Prev</button>
+                        <button type="button" id="nextTestimonial" aria-label="Next testimonial">Next</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact section">
+            <div class="container contact-grid">
+                <div class="contact-copy reveal">
+                    <p class="eyebrow">Contact</p>
+                    <h2>Have a project in mind?</h2>
+                    <p>Tell me what you want to build, improve, or redesign. I will help shape the next step.</p>
+                    <div class="contact-methods">
+                        <a href="mailto:hello@example.com"><svg class="icon"><use href="#icon-mail"></use></svg> hello@example.com</a>
+                        <a href="tel:+1234567890"><svg class="icon"><use href="#icon-phone"></use></svg> +1 (234) 567-890</a>
+                        <button type="button" id="copyEmail"><svg class="icon"><use href="#icon-copy"></use></svg> Copy email</button>
+                    </div>
+                </div>
+
+                <form class="contact-form reveal" id="contactForm">
+                    <label>
+                        <span>Name</span>
+                        <input type="text" name="name" placeholder="Your name" required>
+                    </label>
+                    <label>
+                        <span>Email</span>
+                        <input type="email" name="email" placeholder="your@email.com" required>
+                    </label>
+                    <label>
+                        <span>Project type</span>
+                        <select name="projectType" id="projectType">
+                            <option>Website Development</option>
+                            <option>UI/UX Design</option>
+                            <option>Brand Identity</option>
+                            <option>Backend Development</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span>Message</span>
+                        <textarea name="message" rows="5" placeholder="Tell me about your project" required></textarea>
+                    </label>
+                    <button class="btn btn-primary" type="submit">Send Message <svg class="icon"><use href="#icon-arrow-right"></use></svg></button>
+                    <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p>&copy; 2026 Daniel. All rights reserved.</p>
+            <div>
+                <a href="#" aria-label="LinkedIn profile"><svg class="icon"><use href="#icon-linkedin"></use></svg> LinkedIn</a>
+                <a href="#" aria-label="GitHub profile"><svg class="icon"><use href="#icon-github"></use></svg> GitHub</a>
+                <a href="#" aria-label="Dribbble profile"><svg class="icon"><use href="#icon-dribbble"></use></svg> Dribbble</a>
+            </div>
+        </div>
+    </footer>
+
+    <dialog class="project-modal" id="projectModal">
+        <button class="modal-close" type="button" id="modalClose" aria-label="Close project preview">Close</button>
+        <p class="eyebrow">Project preview</p>
+        <h2 id="modalTitle"></h2>
+        <p id="modalDescription"></p>
+    </dialog>
+
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top"><svg class="icon"><use href="#icon-up"></use></svg></button>
+
+    <script src="script.js"></script>
+</body>
+</html>
